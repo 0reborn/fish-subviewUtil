@@ -1,0 +1,19 @@
+/*----------------------------最小宽度1024及小屏下的问题------------------------------*/
+.wrap-page {
+  min-width: @screen-width-min;
+  height: 100%;
+}
+@media (max-width: @screen-width-md) {
+  .icon-group-embed > span {
+    margin-right: @screen-width-md-grid-icon-margin-right;
+  }
+  .search-group {
+    max-width: @screen-width-md-search-group-max-width;
+  }
+  .ui-dialog.dialog-md {
+    width: @screen-width-md-dialog-md-width;
+  }
+  .ui-dialog.dialog-lg {
+    width: @screen-width-md-dialog-lg-width;
+  }
+}

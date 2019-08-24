@@ -1,0 +1,67 @@
+.ui-jqgrid + .panel,
+.ui-jqgrid + .ui-jqgrid,
+.ui-jqgrid + .tabs-border {
+    margin-top: 8px;
+}
+//无边框的表格
+.panel > .ui-jqgrid,
+.tabs-border .ui-jqgrid {
+    border-bottom: 0;
+    margin-bottom: 0;
+    .ui-jqgrid-titlebar,
+    .ui-jqgrid-hdiv,
+    .ui-jqgrid-bdiv,
+    .ui-jqgrid-pager {
+        border-left: 0;
+        border-right: 0;
+    }
+    .ui-jqgrid-hdiv {
+        border-top: 0;
+    }
+    .ui-jqgrid-titlebar {
+        border-top: 0;
+        border-bottom: @grid-border;
+    }
+}
+//有顶边框的表格
+.panel > form + .ui-jqgrid,
+.tabs-border form + .ui-jqgrid {
+    .ui-jqgrid-hdiv {
+        border-top: @grid-border;
+    }
+    .ui-jqgrid-titlebar {
+        border-top: @grid-border;
+        border-bottom: 0;
+    }
+}
+//表格操作按钮
+.icon-group-embed > span {
+  color: @grid-icon-color;
+  font-size: @font-size-base - 1;
+  line-height: @grid-icon-line-height;
+  margin-right: @grid-icon-margin-right;
+  &:hover {
+    color: @grid-icon-hover-color;
+  }
+}
+.ui-inline {
+  span {
+    font-size: @font-size-base - 1;
+    line-height: @grid-icon-line-height;
+  }
+  > .ui-inline-operate {
+    margin-right: @grid-icon-margin-right;
+  }
+  > .ui-inline-save {
+    color: @grid-icon-save-color;
+  }
+  > .ui-inline-cancel {
+    color: @grid-icon-cancel-color;
+  }
+}
+//-------------columns feature----------------------
+.columns-container + .btn-separate-group-vertical {
+  > .btn {
+    min-width: 100%;
+  }
+}

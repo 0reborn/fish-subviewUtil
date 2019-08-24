@@ -1,0 +1,80 @@
+.@{bootstrap-switch-base} {
+    height: @switchbutton-height;
+    min-width: @switchbutton-width;
+    .@{bootstrap-switch-base}-container {
+        height: 100%;
+        display: block;
+        .@{bootstrap-switch-base}-handle-off,
+        .@{bootstrap-switch-base}-handle-on {
+            background: transparent;
+        }
+        .clearfix();
+    }
+    .@{bootstrap-switch-base}-handle-on,
+    .@{bootstrap-switch-base}-handle-off,
+    .@{bootstrap-switch-base}-label {
+        width: 33.334%; //decimal width problem
+    }
+    &.@{bootstrap-switch-base}-focused {
+        border-color: @btn-default-border;
+        box-shadow: none;
+    }
+    
+    .@{bootstrap-switch-base}-label {
+        border: 1px solid @btn-default-border;
+        margin: 0;
+    }
+    &.@{bootstrap-switch-base}-lg {
+        min-width: @switchbutton-lg-width;
+        height: @switchbutton-lg-height;
+    }
+    &.@{bootstrap-switch-base}-sm,
+    &.@{bootstrap-switch-base}-xs {
+        input[type="checkbox"] {
+            margin-top: 0;
+        }
+    }
+    &.@{bootstrap-switch-base}-sm {
+        min-width: @switchbutton-sm-width;
+        height: @switchbutton-sm-height;
+    }
+    &.@{bootstrap-switch-base}-xs {
+        min-width: @switchbutton-xs-width;
+        height: @switchbutton-xs-height;
+    }
+    &.@{bootstrap-switch-base}-disabled {
+        &,
+        .@{bootstrap-switch-base}-label {
+            border-color: @btn-default-border;
+        }
+        .@{bootstrap-switch-base}-label{
+            background-color: @switchbutton-disabled-label-color;
+        }
+        .@{bootstrap-switch-base}-container{
+            background-color: @switchbutton-disabled-bg-color;
+        }
+    }
+}
+
+.@{bootstrap-switch-base}-on {
+    &,
+    &.@{bootstrap-switch-base}-focused,
+    .@{bootstrap-switch-base}-label {
+        border-color: @switchbutton-on-color;
+    }
+    .@{bootstrap-switch-base}-container {
+        background-color: @switchbutton-on-color;
+    }
+    .@{bootstrap-switch-base}-label {
+        border-right: 0;
+    }
+}
+
+.@{bootstrap-switch-base}-off {
+    .@{bootstrap-switch-base}-container {
+        background-color: @component-base-color;
+    }
+    .@{bootstrap-switch-base}-label {
+        border-left: 0;
+    }
+}

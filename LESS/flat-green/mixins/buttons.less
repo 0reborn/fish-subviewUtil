@@ -1,0 +1,19 @@
+// --------button status variant------------------
+.btn-status-variant(@btn-type; @background; @border) {
+  .btn-@{btn-type} {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: @background;
+      border-color: @border;
+    }
+    &.active {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @background;
+        border-color: @border;
+      }
+    }
+  }
+}

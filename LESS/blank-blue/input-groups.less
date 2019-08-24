@@ -1,0 +1,28 @@
+// -----------------input-groups-----------------------
+.input-group-btn {
+    > .btn,
+    > .btn-group {
+        height: @input-group-btn-height;
+        padding: @input-group-btn-padding;
+        color: @text-emphasis-color;
+        background: @input-group-btn-bg;
+        border-color: @searchbar-border-color;
+        border-left-width: 0;
+        .border-right-radius(4px);
+        &:hover {
+            color: @brand-primary;
+        }
+    }
+    + .form-control {
+        height: @input-group-btn-height;
+        background-color: @component-base-color;
+        border: 1px solid @btn-default-border;
+        .border-right-radius(4px);
+    }
+}
+.input-group-btn:first-child {
+    > .btn,
+    > .btn-group {
+        border-left-width: 1px;
+    }
+}

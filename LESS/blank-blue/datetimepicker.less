@@ -1,0 +1,18 @@
+.datetimepicker {
+  table tr td {
+    &.active,
+    &.active:hover,
+    &.active.disabled,
+    &.active.disabled:hover {
+      background-color: @datetimepicker-selected-color;
+    }
+    span {
+      &.active,
+      &.active:hover,
+      &.active.disabled,
+      &.active.disabled:hover {
+        background-color: @datetimepicker-selected-color;
+      }
+    }
+  }
+}

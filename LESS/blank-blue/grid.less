@@ -1,0 +1,70 @@
+.ui-jqgrid-view .ui-jqgrid-htable .ui-th-column,
+.ui-jqgrid-view .ui-jqgrid-htable .ui-th-column-header {
+	font-weight: @grid-header-font-weight;
+    border: 0;
+    &:hover {
+        border-right: @grid-th-resize-hover;
+    }
+}
+.ui-jqgrid + .panel,
+.ui-jqgrid + .ui-jqgrid,
+.ui-jqgrid + .tabs-border {
+    margin-top: 8px;
+}
+.ui-jqgrid-view .ui-jqgrid-btable tr.jqgrow.row-striped td {
+	border: 0;
+}
+.ui-jqgrid-view {
+    .ui-jqgrid-btable tr.jqgroup td {
+        padding: @grid-td-cell-padding-vertical 0;
+    }
+    .ui-jqgrid-btable {
+        .tree-minus,
+        .tree-plus {
+            color: @grid-tree-arrow-icon-color;
+        }
+        tr.ui-state-highlight {
+            .tree-minus,
+            .tree-plus {
+                color: @grid-tree-arrow-icon-active-color;
+            }
+            .stepper .btn-default.disabled {
+                color: @stepper-disabled-text-color;
+            }
+        }
+    }
+    .ui-jqgrid-bdiv {
+        .ui-jqgrid-btable {
+            .ui-inline-operate {
+                visibility: hidden;
+            }
+            tr.jqgrow {
+                td {
+                    .editable {
+                        height: @grid-editable-height;
+                    }
+                }
+                &:hover {
+                    .ui-inline-operate {
+                        visibility: visible;
+                    }
+                }
+                &[editable="1"] {
+                    .ui-inline-operate {
+                        visibility: visible;
+                    }
+                }
+            }
+            tr.ui-state-highlight {
+                .ui-inline-operate {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    .ui-jqgrid-htable {
+        th[id*="cb"] {
+            padding-right: @grid-th-cell-padding-horizontal;
+        }
+    }
+}

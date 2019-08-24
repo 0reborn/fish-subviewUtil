@@ -1,0 +1,46 @@
+.stepper {
+	max-width: @stepper-max-width;
+	.btn-default,
+	.form-control {
+		border-color: @stepper-border-color;
+		color: @stepper-text-color;
+	}
+	.form-control {
+		height: @input-group-btn-height;
+		background-color: @stepper-bg;
+		border-width: 1px;
+		&:hover,
+		&:focus {
+			color: @stepper-hover-text-color;
+		}
+	}
+    .input-group-btn {
+        > .btn,
+        > .btn-group {
+            padding: @stepper-btn-padding;
+            color: @stepper-btn-text-color;
+        }
+    }
+    .input-group-btn:last-child {
+        > .btn,
+        > .btn-group {
+        	margin-left: 0;
+        }
+    }
+	.btn-default {
+		&:hover,
+		&:focus,
+		&:active,
+		&:active:hover,
+		&:active:focus {
+			background-color: @stepper-hover-bg;
+			color: @stepper-hover-text-color;
+			border-color: @stepper-border-color;
+		}
+		&.disabled {
+			color: @stepper-disabled-text-color;
+            border-color: @stepper-disabled-border-color;
+            pointer-events: none;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+.session__container{
+	height: 100%;
+	padding: 20px;
+	background-color: @head-bg-color;
+	.footer{
+		width: 97.2%;
+		width: ~'calc(100% - 40px)';
+		background-color: @head-bg-color;
+		color: #c5c5c5;
+	}
+}
+.session_main{
+	position: relative;
+	height: 72%;
+	height: ~'calc(100% - 180px)';
+	margin-top: 20px;
+	background-color: #fff;
+}
+.session__content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -40px 0 0 -260px;
+}
+.link{
+	display: inline-block;
+	margin: 0 5px;
+	color: @warning-color;
+	cursor: pointer;
+	&:hover{
+		color: darken(@warning-color, 10%);
+	}
+}

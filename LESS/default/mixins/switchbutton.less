@@ -1,0 +1,11 @@
+// --------switchbutton size------------------
+.switchbutton-size(@padding-vertical; @padding-horizontal; @font-size; @line-height) {
+  .ui-switch-handle-on,
+  .ui-switch-handle-off,
+  .ui-switch-label {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    height: 2*@padding-vertical + @font-size*@line-height;
+  }
+}

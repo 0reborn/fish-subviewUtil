@@ -1,0 +1,41 @@
+.ui-multiselect-container {
+    box-shadow: none;
+    border-width: 0 0 1px 0;
+    .ui-multiselect-choices {
+        li {
+            &.search-choice {
+                border: 0;
+                &:hover > span.overflow-ellipsis {
+                    max-width: @multiselect-option-hover-max-width;
+                }
+            }
+            &:first-child {
+                &.search-choice > span {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.ui-multiselect-choices {
+    li.search-choice {
+        &:after {
+            content: ',';
+        }
+    }
+    li:nth-last-child(2):after {
+        content: none;
+    }
+}
+
+.ui-multiselect-disabled {
+    .ui-multiselect-choices {
+        li.search-choice {
+            color: @disabled-text-color;
+            &:hover > span.overflow-ellipsis {
+                max-width: @multiselect-option-max-width;
+            }
+        }
+    }
+}

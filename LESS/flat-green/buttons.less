@@ -1,0 +1,25 @@
+.btn {
+	border-radius: 2px;
+	&:active {
+		box-shadow: none;
+	}
+}
+.btn-status-variant(default; @btn-default-status-bg-color; @btn-default-status-border-color);
+.btn-status-variant(primary; @btn-primary-status-bg-color; @btn-primary-status-border-color);
+.btn-status-variant(info; @btn-info-status-bg-color; @btn-info-status-border-color);
+.btn-status-variant(warning; @btn-warning-status-bg-color; @btn-warning-status-border-color);
+.btn-status-variant(danger; @btn-danger-status-bg-color; @btn-danger-status-border-color);
+.btn-success {
+	&:hover,
+	&:focus,
+	&:active {
+		border-color: @btn-success-status-border-color;
+	}
+	&.active {
+		&,
+		&:hover,
+		&:focus {
+			border-color: @btn-success-status-border-color;
+		}
+	}
+}

@@ -1,0 +1,80 @@
+.btn-default {
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:focus {
+	    border-color: @btn-primary-bg;
+	    background-color: @component-base-color;
+	    color: @btn-primary-bg;
+	}
+}
+.btn + .btn-icon {
+	margin-left: @btn-icon-margin-left;
+}
+.btn-icon {
+	padding-left: @btn-icon-padding-horizontal;
+	padding-right: @btn-icon-padding-horizontal;
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:hover,
+	&:active:focus,
+	&:visited {
+		background-color: transparent;
+	}
+	span {
+		font-size: @font-size-base + 1;
+		display: block;
+		margin-top: @btn-icon-icon-margin-top;
+	}
+	& + & {
+		margin-left: 0;
+	}
+	&:hover,
+	&:focus,
+	&:active:focus {
+		color: @btn-primary-bg;
+	}
+}
+.dropdown > .btn-default {
+	color: @dropdown-color;
+	border-color: @dropdown-color;
+	&:hover {
+		color: @dropdown-hover-color;
+		background-color: @dropdown-color;
+	}
+}
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+	&.disabled,
+	&[disabled] {
+		.opacity(1);
+		&,
+		&:active:hover,
+		&:active:focus {
+			color: @btn-disabled-color;
+		}
+		&,
+		&:hover,
+		&:focus {
+			background-color: @btn-disabled-bg;
+			border-color: @btn-disabled-bg;
+		}
+	}
+}
+//文字按钮
+.btn-text {
+    background-color: transparent;
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:active:hover {
+        box-shadow: none;
+        color: @btn-primary-bg;
+    }
+}

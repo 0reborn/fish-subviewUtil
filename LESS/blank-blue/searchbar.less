@@ -1,0 +1,65 @@
+.search-group{
+	.form-control,
+	.input-group-addon {
+		border-color: @searchbar-border-color;
+		background-color: @searchbar-bg;
+		border-width: @searchbar-border-width;
+	}
+	.input-group-addon {
+    	color: @text-emphasis-color;
+		border-radius: 0 @border-radius-base @border-radius-base 0;
+		font-size: @searchbar-search-btn-font-size;
+	}
+	.form-control {
+		height: @searchbar-height;
+		&:hover,
+		&:focus {
+			~ .input-group-addon {
+				border-color: @searchbar-border-color;
+			}
+		}
+		&:first-child {
+			.border-left-radius(@border-radius-base);
+		}
+		&,
+		&:not(:first-child):not(:last-child) {
+			.border-right-radius(@border-radius-base);
+		}
+	}
+	.input-group-btn > .btn,
+	.input-group-btn > .btn-group {
+		padding-left: @searchbar-btn-horizontal;
+		padding-right: @searchbar-btn-horizontal;
+	}
+	.btn {
+		&:active,
+		&:active:focus {
+			border-color: @searchbar-border-color;
+			background-color: @searchbar-header-bg;
+		}
+		&,
+		&:hover,
+		&:active,
+		&:focus {
+			z-index: 4;
+		}
+	}
+	&.search-group-tail {
+		.form-control,
+		.form-control:not(:first-child):not(:last-child) {
+			.border-right-radius(0);
+		}
+	}
+	.form-control-feedback {
+		top: @has-border-form-control-feedback-top;
+	}
+	.glyphicon-search:hover {
+		color: @brand-primary;
+	}
+}
+
+.search-group-tail {
+    .form-control {
+        border-right: none;
+    }
+}

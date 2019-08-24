@@ -1,0 +1,241 @@
+/*------------------------layout-------------------------------*/
+.panel-default {
+    margin-bottom: 0;
+    overflow:hidden;
+    .panel-body > form {
+        margin-top: 5px;
+        margin-bottom: -5px;
+        background: transparent;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        ~.ui-jqgrid {
+            margin: 0 -8px -8px;
+            .ui-jqgrid-hdiv {
+                border-top: 1px solid @border-default-color;
+            }
+        }
+    }
+    .panel-body > .ui-jqgrid {
+        margin: -10px;
+        .ui-jqgrid-hdiv {
+            border-top: 0;
+        }
+    }
+    .ui-jqgrid {
+        border-bottom: 0;
+        .ui-jqgrid-hdiv,
+        .ui-jqgrid-bdiv,
+        .ui-jqgrid-pager {
+            border-left: 0;
+            border-right: 0;
+        }
+    }
+    form {
+        border: 0;
+        .ui-jqgrid {
+            margin: 0 !important;
+        }
+    }
+    & + &,
+    & + .ui-jqgrid {
+        margin-top: 8px;
+    }
+    ~.ui-tabs {
+        margin-top: 8px;
+    }
+    .searchbar-grid {
+        .search-bar {
+            border-width: 0;
+        }
+        .grid {
+            border-width: 0;
+        }
+    }
+}
+.panel-tab {
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    >.panel-heading{
+        padding: 0;
+        border-bottom: 1px solid @bg-primary-color;
+        .panel-title{
+            display: inline-block;
+            padding: 4px 10px;
+            background-color: @bg-primary-color;
+            color: #fff;
+        }
+    }
+    >.panel-body{
+        padding: 0;
+        box-shadow: 0 1px 1px 1px @panel-shadow-color;
+    }
+    .grid {
+        width: 99.9%;
+        ~ .panel-default {
+            margin-top: 0;
+            border-top: 0;
+            .panel-body {
+                padding: 8px 10px;
+            }
+        }
+    }
+}
+form.form-inline {
+	border:0;
+	background: transparent;
+	padding: 0;
+}
+.btn-sec-lower{
+	border-color: #e74c3c;
+	color:#e74c3c;
+	background-color: #fff;
+	&:hover,&:focus,&.active{
+		background-color: #e74c3c;
+		color: #fff;
+	}
+}
+.btn-sec-low{
+	border-color: #e67e22;
+	color:#e67e22;
+	background-color: #fff;
+	&:hover,&:focus,&.active{
+		background-color: #e67e22;
+		color: #fff;
+	}
+}
+.btn-sec-moderate{
+	border-color: @warning-color;
+	color:@warning-color;
+	background-color: #fff;
+	&:hover,&:focus,&.active{
+		background-color: @warning-color;
+		color: #fff;
+	}
+}
+.btn-sec-high{
+	border-color: #2ecc71;
+	color:#2ecc71;
+	background-color: #fff;
+	&:hover,&:focus,&.active{
+		background-color: #2ecc71;
+		color: #fff;
+	}
+}
+.btn-sec-higher{
+	border-color: #1abc9c;
+	color:#1abc9c;
+	background-color: #fff;
+	&:hover,&:focus,&.active{
+		background-color: #1abc9c;
+		color: #fff;
+	}
+}
+.modal-body{
+	.role-manage-page {
+		padding: 0;
+	}
+	.search-bar{
+		padding-left: 0;
+		padding-right: 0;
+		border: 0;
+	}
+	.searchbar-grid {
+		margin-top: -8px;
+	}
+	.role-btn-group ~ .searchbar-grid .search-bar {
+		border-top: 0;
+	}
+	.role-subgrid {
+		margin: 27px 0 0 -9px;
+	}
+	.role-component-grid {
+		margin-left: -9px;
+	}
+	.row {
+		~ .row .panel-default {
+			margin-top: 8px;
+		}
+	}
+	form ~ .grid {
+		margin-top: 3px;
+	}
+}
+.modal-footer {
+	form {
+		margin-bottom: -5px;
+	}
+}
+.grid {
+    & + &,
+    & + .panel-default {
+        margin-top: 8px;
+    }
+    ~ .tabs {
+        margin-top: 8px;
+        #CONTACT_ID .panel-default,
+        #FEE_FACTOR .panel-default,
+        #SCALE .panel-default {
+            border-bottom: 0;
+        }
+        ~ .panel-default {
+            border-top: 0;
+            margin-top: 0;
+        }
+    }
+}
+form .grid {
+    border-bottom: 0;
+    .ui-jqgrid-hdiv{
+        border-left: 1px solid @border-default-color !important;
+    }
+    .ui-jqgrid-bdiv{
+        border-left: 1px solid @border-default-color !important;
+        border-right: 1px solid @border-default-color !important;
+    }
+}
+/*------------------------style-------------------------------*/
+h4 {
+    font-size: 13px;
+    font-weight: normal;
+}
+.basic-color(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+}
+/*grid修改*/
+.grid-height-lg {
+  height: 485px;
+}
+.grid-height-md {
+  height: 335px;
+}
+.grid-height-sm {
+  height: 185px;
+}
+.grid-height-xs {
+  height: 65px;
+}
+.gridpage-height-lg {
+  height: 520px;
+}
+.gridpage-height-md {
+  height: 370px;
+}
+.gridpage-height-sm {
+  height: 220px;
+}
+
+
+
+.navbar-nav > li > .dropdown-menu > li > a {
+	border: 0;
+	&:hover, 
+	&.ui-state-focus, 
+	&.ui-state-active {
+		border: 0;
+	}
+}

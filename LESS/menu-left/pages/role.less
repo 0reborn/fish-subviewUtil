@@ -1,0 +1,107 @@
+/*-------------------role--------------------------*/
+.role-pos{
+	padding: 0 20px 10px 0;
+}
+.role-subgrid {
+	margin: 31px 0 0 -9px;
+	border-top: 1px solid @tabs-inner-border-color;
+}
+.role-btn-group{
+	border-top: 1px solid #ededed;
+	border-bottom: 1px solid #ededed;
+	text-align: center;
+	background-color: #ededed;
+	margin: 8px 0;
+	padding: 8px 0;
+	>.btn{
+		border: 1px solid @border-default-color;
+		margin-left: 11px;
+		margin-right: 11px;
+		font-size: 18px;
+		padding: 0 8px;
+		background-color: #777;
+		color: #fff;
+		&:hover{
+			background-color: #666;
+		}
+		&[disabled]{
+			background-color: @bg-disabled-color;
+			color: @icon-disabled-color;
+			opacity: 1;
+			filter: ~"alpha(opacity=100)";
+		}
+	}
+	&.vertical{
+		margin-top: 130px; 
+		border: 0;
+		background: transparent;
+		 >.btn{
+		 	margin: 0 0 25px 0;
+		 	min-width: 28px;
+		 }
+	}
+	~.searchbar-grid {
+		margin-top: -8px;
+	}
+}
+.title-forgrid{
+	margin: 0;
+	font-weight: bold;
+	line-height: 25px;
+	>.glyphicon{
+		margin-right: 5px;
+		color: @link-primary-color;
+	}
+}
+.role-priv-container{
+	width: 46%;
+	float: left;
+	.grid-dialog-left-height {
+		height: 412px !important;
+		border: 1px solid @border-default-color;
+		border-top: 0;
+		.ui-jqgrid-hdiv,
+		.ui-jqgrid-bdiv {
+			border-left: 0;
+			border-right: 0;
+		}
+	}
+}
+.role-priv-btn-container{
+	width: 8%;
+	float: left;
+	padding: 0 10px;
+}
+.role-component-grid {
+	margin-left: -9px;
+}
+.ui-tabs .role-manage-page {
+	padding: 0;
+	.ui-jqgrid .ui-jqgrid-titlebar {
+		border: 0;
+	}
+	.role-subgrid {
+		margin: 24px 0 0 -8px;
+	    border-top: 1px solid #efefef;
+	    padding-top: 10px;
+	}
+}
+.ui-tabs .role-manage-page {
+	.ui-jqgrid {
+		border-bottom: 1px solid #efefef;
+	    .ui-jqgrid-titlebar,
+	    .ui-jqgrid-hdiv,
+	    .ui-jqgrid-bdiv,
+	    .ui-jqgrid-pager {
+	        border-left: 1px solid #efefef;
+	        border-right: 1px solid #efefef;
+	    }
+	    .ui-jqgrid-hdiv {
+	        border-top: 1px solid #efefef;
+	    }
+	    .ui-jqgrid-titlebar {
+	        border-top: 1px solid #efefef;
+	        border-bottom: 0;
+	    }
+	}
+}

@@ -1,0 +1,13 @@
+.combobox-readonly {
+    padding-right: @combobox-readonly-padding-right;
+    &.disabled {
+    	&,
+    	.combobox-placeholder,
+    	.form-control-feedback {
+    		color: @disabled-text-color;
+    	}
+    	&:hover {
+    		border-color: @input-border;
+    	}
+    }
+}

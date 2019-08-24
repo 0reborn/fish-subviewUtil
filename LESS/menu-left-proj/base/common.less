@@ -1,0 +1,27 @@
+#app {
+    height: 100%;
+}
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+.no-padding {
+    padding: 0!important;
+}
+.no-margin {
+    margin: 0!important;
+}
+// 文字超出宽度则以 ... 显示
+.block-ellipsis(@width: 100%) {
+    display: block;
+    overflow : hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+    width : @width;
+}

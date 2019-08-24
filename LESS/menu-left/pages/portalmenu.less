@@ -1,0 +1,127 @@
+.ui-menu {
+    border: 0;
+    > li > a {
+        &:hover, 
+        &:focus,
+        &.ui-state-focus, 
+        &.ui-state-active {
+            color: #fff;
+            background-color: @bg-menu-active;
+        } 
+    }
+    .ui-menu {
+        background-color: transparent;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+}
+.portal-menu {
+    font-size: @font-default-size;
+    .portal-menu__item{
+        a {
+            padding: 12px (@padding-base+5);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            background-color: @head-bg-hover-color;
+            color: @base-color;
+        }
+    }
+    hr {
+        background-color: @bg-menu;
+        border-color: @bg-menu-active;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+.portal-menu_main{
+    .portal-menu__item{
+        > a {
+            >.ui-menu-icon{
+                display: none;
+            }
+        }
+        >.portal-menu__item_icon{
+            color: #bdbdbd;
+            margin-top: -25px;
+            float: right;
+            margin-right: 10px;
+        }
+        &.active{
+            > a {
+                background-color: @bg-menu-active;
+            }
+        }
+    }
+}
+.portal__nav .dropdown-menu {
+    padding: 0;
+    min-width: 200px;
+    max-width: 300px;
+    border: 0;
+    background: @bg-menu;
+    > li {
+        &.active{
+            > a {
+                background-color: @bg-menu-active;
+            }
+        }
+        a:hover,
+        a:focus {
+            color: @base-color;
+            background: @bg-menu-active;
+        }
+    }
+    .iconfont {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+    .portal-menu_main .iconfont {
+        font-size: 12px;
+    }
+}
+.portal-menu_main,
+.portal-menu-scrollbar,
+.ui-menu.dropdown-menu {
+  overflow-y: auto;
+}
+.ui-menu {
+    &,
+    &.dropdown-menu {
+        width: 255px;
+        .ui-menu {
+            width: 230px;
+        }
+    }
+    &.dropdown-menu .ui-menu {
+        position: fixed;
+    }
+}
+.dropdown-menu {
+    .ui-menu-icon,
+    .iconfont {
+        font-size: 12px;
+    }
+    .ui-menu-icon {
+        margin-top: 3px;
+    }
+    .iconfont {
+        margin-top: -1px;
+    }
+} 
+.portal-search-menu__list {
+  width: 240px !important;
+  max-height: 90%;
+  background-color: @bg-menu;
+  border: 0;
+  box-shadow: none;
+  li {
+      padding: 11px 10px 11px 20px;
+      border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      color: #fff;
+      &:hover {
+        background-color: @bg-menu-active;
+        border-color: @bg-menu-active;
+      }
+  }
+}

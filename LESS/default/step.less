@@ -1,0 +1,94 @@
+.step-container {
+    position: relative;
+    width: 100%;
+}
+
+.step-container-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+    >li {
+        float: left;
+        text-align: center;
+        color: @step-bg-color;
+        >span {
+            display: inline-block;
+            width: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        &.active {
+            color: @step-active-color;
+            transition: color 0.6s ease;
+            >.step-node {
+                &:extend(.step-container-steps >li.finished >.step-node);
+                transform: scale(1.5);
+            }
+        }
+        &.finished {
+            color: @step-done-color;
+            >.step-node {
+                background-color: @step-active-color;
+                transition: color 0.6s ease;
+            }
+        }
+    }
+}
+
+.step-progress {
+    position: absolute;
+    width: 100%;
+    bottom: (@step-node-height - @step-progress-bar-height)/2;
+}
+
+.step-progress-bar {
+    margin: 0;
+    height: @step-progress-bar-height;
+    background: @step-bg-color;
+    overflow: hidden;
+}
+
+.step-progress-highlight {
+    display: block;
+    height: 100%;
+    background: @step-active-color;
+    transition: width 0.6s ease;
+}
+
+.step-node {
+    position: relative;
+    z-index: 1;
+    margin: @step-node-margin;
+    width: @step-node-width;
+    background: @step-bg-color;
+    border-radius: 100%;
+    color: @step-node-color;
+    line-height: @step-node-height;
+    text-align: center;
+}
+
+.step-interaction {
+    >li {
+        cursor: pointer;
+        &:hover {
+            color: @step-active-color;
+            >.step-node {
+                box-shadow: 0 0 0 6px #e2fabc, 0 0 0 7px #c3e68b;
+            }
+        }
+        &.select{
+            color: @step-active-color;
+            >.step-node{
+                box-shadow: none;
+                transform: scale(1.5);
+            }
+        }
+        &.active{
+            &:hover > .step-node{
+                box-shadow: none;
+            }
+        }
+    }
+}
