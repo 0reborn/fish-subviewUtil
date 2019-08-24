@@ -4,7 +4,7 @@
  * Copyright: Copyright 2016 ZTESOFT, Inc.
  */
 define([
-   'hbs!modules/subview/templates/CustomerFormView.html',
+   'hbs!modules/subview/templates/ProductFormView.html',
    'i18n!modules/subview/i18n/Subview.i18n',
 
 ], function (tpl, i18n) {

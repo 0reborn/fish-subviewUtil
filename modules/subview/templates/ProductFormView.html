@@ -1,11 +1,11 @@
 <div class="iot-subview">
-   <form class="form-horizontal js-form" action="data.json">
+   <form class="form-horizontal js-form" id="detailform" action="data.json">
       <div class="row">
          <div class="col-md-6 col-sm-12">
             <div class="form-group required">
                <label class="col-md-4 col-sm-4 control-label">用户名</label>
                <div class="col-md-8 col-sm-8">
-                  <input name="username" class="form-control" data-rule="required;username" value="tanyl">
+                  <input id="userName" name="username" class="form-control" data-rule="required;username" value="tanyl">
                </div>
             </div>
          </div>
@@ -13,7 +13,7 @@
             <div class="form-group required">
                <label class="col-md-4 col-sm-4 control-label">地址</label>
                <div class="col-md-8 col-sm-8">
-                  <input name="address" class="form-control" data-rule="required;"
+                  <input id="autocomplete" name="address" class="form-control" data-rule="required;"
                      value="ActionScript">
                </div>
             </div>
@@ -24,7 +24,7 @@
             <div class="form-group required">
                <label class="col-md-4 col-sm-4 control-label">密码</label>
                <div class="col-md-8 col-sm-8">
-                  <input name="password" class="form-control" data-rule="required;password" type="text"
+                  <input id="password" name="password" class="form-control" data-rule="required;password" type="text"
                      value="123456">
                </div>
             </div>
@@ -33,7 +33,7 @@
             <div class="form-group required">
                <label class="col-md-4 col-sm-4 control-label">确认密码</label>
                <div class="col-md-8 col-sm-8">
-                  <input name="confirmPassword" class="form-control" data-rule="required;match[password]"
+                  <input id="repassword" name="confirmPassword" class="form-control" data-rule="required;match[password]"
                      type="password" value="123456">
                </div>
             </div>
@@ -44,7 +44,7 @@
             <div class="form-group required">
                <label class="col-md-4 col-sm-4 control-label">爱好</label>
                <div class="col-md-8 col-sm-8">
-                  <select class="combobox form-control" name="hobby" data-rule="required">
+                  <select class="combobox form-control" name="hobby" id="stateSelect" data-rule="required">
                      <!-- <option value="">Please select...</option> -->
                      <option value="Alabama">Alabama</option>
                      <option value="Alaska">Alaska</option>
@@ -61,12 +61,12 @@
                <label class="col-md-4 col-sm-4 control-label">角色</label>
                <div class="col-md-8 col-sm-8">
                   <label class="checkbox-inline">
-                     <input type="checkbox" name="role" value="0"
+                     <input type="checkbox" name="role" id="inlineCheckbox1" value="0"
                         data-rule="checked" checked="true">Admin</label>
                   <label class="checkbox-inline">
-                     <input type="checkbox" name="role" value="1">User</label>
+                     <input type="checkbox" name="role" id="inlineCheckbox2" value="1">User</label>
                   <label class="checkbox-inline">
-                     <input type="checkbox" name="role" value="2">Visitor</label>
+                     <input type="checkbox" name="role" id="inlineCheckbox3" value="2">Visitor</label>
                </div>
             </div>
          </div>

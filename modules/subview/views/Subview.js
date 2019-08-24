@@ -20,9 +20,15 @@ define([
          return this.i18nData;
       },
       // 视图事件定义
-      events: {},
+      events: {
+         'click .js-query': 'submit'
+      },
       // 一些初始化设置 (不能进行dom操作)
       initialize: function () {
+         this.formObject = {
+            userId: 123,
+            custId: 357,
+         }
       },
       // 视图渲染完毕处理函数
       afterRender: function () {
@@ -34,6 +40,7 @@ define([
             selector: '.js-main',   // 父视图div
             parentView: this        // 父视图
          }).then(function (subviews) {
+            me.subviews = subviews; // 先把子视图保存下来
             // 子视图渲染完毕后，遍历子视图数组，根据不同类型来进行个性化的操作
             fish.each(subviews, function (view) {
                if (view.type === 'grid') {
@@ -49,9 +56,18 @@ define([
             });
          });
       },
-      // 视图被删除时候做的事情
-      cleanup: function () {
-         me = null;
+
+      // 父视图提交
+      submit: function () {
+         // 子视图集体校验
+         if (!this.subviews.isValid()) {
+            fish.info('子视图校验失败');
+            return;
+         }
+         
+         // 子视图的表单json数据集合
+         var formObject = this.subviews.toFormObject();
+         console.log(formObject);
       }
    });
 });
